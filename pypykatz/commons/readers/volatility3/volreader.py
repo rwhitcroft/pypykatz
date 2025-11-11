@@ -158,7 +158,8 @@ class Vol3Reader:
 			raise Exception('Unsupported Volatility Framework Version')
 		if not symbol_table_is_64bit:
 			self.processor_architecture = KatzSystemArchitecture.X86
-		self.processor_architecture = KatzSystemArchitecture.X64
+		else:
+			self.processor_architecture = KatzSystemArchitecture.X64
 
 	def align(self, alignment = None):
 		"""
