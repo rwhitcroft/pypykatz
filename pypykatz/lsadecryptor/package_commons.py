@@ -115,8 +115,6 @@ class PackageDecryptor:
 		"""
 		
 		dec_password = None
-		if self.package_name == 'Ssp':
-			segment_size = 8
 
 		temp = self.lsa_decryptor.decrypt(enc_password, segment_size=segment_size)
 		if temp and len(temp) > 0:
